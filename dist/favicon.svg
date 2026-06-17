@@ -1,0 +1,22 @@
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="15" y="25" width="22" height="58" rx="11" transform="rotate(-28 15 25)" fill="url(#fg-1)" />
+  <rect x="42" y="25" width="22" height="58" rx="11" transform="rotate(-28 42 25)" fill="url(#fg-2)" />
+  <circle cx="75" cy="70" r="12" fill="url(#fs)" />
+  <defs>
+    <linearGradient id="fg-1" x1="15" y1="25" x2="37" y2="83" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#FFF59D" />
+      <stop offset="30%" stopColor="#D4A017" />
+      <stop offset="100%" stopColor="#8C620B" />
+    </linearGradient>
+    <linearGradient id="fg-2" x1="42" y1="25" x2="64" y2="83" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#FFF59D" />
+      <stop offset="30%" stopColor="#D4A017" />
+      <stop offset="100%" stopColor="#8C620B" />
+    </linearGradient>
+    <linearGradient id="fs" x1="63" y1="58" x2="87" y2="82" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#FFFFFF" />
+      <stop offset="50%" stopColor="#D1D5DB" />
+      <stop offset="100%" stopColor="#6B7280" />
+    </linearGradient>
+  </defs>
+</svg>
