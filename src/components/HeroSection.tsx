@@ -11,7 +11,7 @@ export const HeroSection: React.FC = () => {
   const chartPath2 = "M 0,140 Q 60,170 120,110 T 240,150 T 360,90 T 480,120 T 600,50";
 
   return (
-    <div className="relative w-full lg:h-[720px] bg-[#000000] overflow-hidden flex flex-col justify-between select-none">
+    <div className="relative w-full lg:h-[760px] bg-[#000000] overflow-hidden flex flex-col justify-between select-none">
       
       {/* Header/Navbar */}
       <header className="relative w-full max-w-[1400px] mx-auto px-6 md:px-12 py-6 flex items-center justify-between z-50">
@@ -28,10 +28,10 @@ export const HeroSection: React.FC = () => {
       {/* Main Hero Content */}
       <main className="relative flex-1 w-full max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col lg:flex-row items-center justify-between z-40 pb-12 lg:pb-0 h-full gap-8">
         
-        {/* Left Column (45% on desktop) */}
-        <div className="w-full lg:w-[45%] flex flex-col justify-center items-start text-left gap-6 md:gap-7">
+        {/* Left Side (42% on desktop) */}
+        <div className="w-full lg:w-[42%] flex flex-col justify-center items-start text-left gap-6 md:gap-7">
           
-          {/* Top Badge */}
+          {/* Top Gold Badge */}
           <div className="inline-flex items-center gap-2 px-4 h-[40px] rounded-full bg-[rgba(232,178,76,0.12)] border border-[rgba(232,178,76,0.2)]">
             <span className="w-2.5 h-2.5 rounded-full bg-[#E8B24C] shrink-0" />
             <span className="text-xs md:text-sm font-semibold text-[#E8B24C] font-sans tracking-wide">
@@ -39,19 +39,19 @@ export const HeroSection: React.FC = () => {
             </span>
           </div>
 
-          {/* Main Headline */}
-          <h1 className="text-4xl md:text-5xl lg:text-[72px] font-bold text-white font-sans leading-[1.1] text-left tracking-tight m-0">
+          {/* Large Headline */}
+          <h1 className="text-4xl md:text-6xl lg:text-[84px] font-extrabold text-white font-sans leading-[0.95] text-left tracking-tight m-0 max-w-[560px]">
             India’s Smart Network<br />
             for <span className="text-[#E8B24C]">Gold & Silver</span><br />
             Bullion Trading
           </h1>
 
           {/* Description */}
-          <p className="text-[#A8A8A8] text-base md:text-[18px] leading-[1.8] font-sans font-normal max-w-[560px] m-0">
+          <p className="text-[#B3B3B3] text-base md:text-[18px] leading-[1.8] font-sans font-normal max-w-[520px] m-0">
             Connect with verified bullion dealers, traders, refineries, mints and raw material suppliers in precision, privacy, and profit. Real opportunities. Real-time prices. Smarter than any EPP you'll find on market.
           </p>
 
-          {/* CTA Buttons */}
+          {/* CTA Row */}
           <div className="flex flex-row gap-[20px] w-full justify-start items-center">
             {/* Button 1: Get Early Access Now */}
             <motion.button
@@ -73,7 +73,7 @@ export const HeroSection: React.FC = () => {
             </motion.button>
           </div>
 
-          {/* Bottom Features Row */}
+          {/* Feature Row */}
           <div className="flex flex-wrap gap-x-6 gap-y-3 pt-6 border-t border-neutral-900 w-full mt-4">
             {[
               { icon: ShieldCheck, text: 'Verified Network' },
@@ -92,13 +92,13 @@ export const HeroSection: React.FC = () => {
 
         </div>
 
-        {/* Right Column (55% on desktop) */}
-        <div className="w-full lg:w-[55%] relative h-[480px] lg:h-[580px] flex items-center justify-center mt-8 lg:mt-0">
+        {/* Right Side (58% on desktop) */}
+        <div className="w-full lg:w-[58%] relative h-[520px] lg:h-[640px] flex items-center justify-center mt-8 lg:mt-0">
           
           {/* ========================================================
-              A. BACKGROUND LAYER: World Map (glowing gold dots)
+              LAYER 1 (BACKGROUND): Large dotted world map (20% Opacity)
              ======================================================== */}
-          <div className="absolute inset-0 opacity-40 select-none pointer-events-none flex items-center justify-center z-0">
+          <div className="absolute inset-0 opacity-20 select-none pointer-events-none flex items-center justify-center z-0">
             <svg viewBox="0 0 1000 550" className="w-full h-auto filter drop-shadow-[0_0_15px_rgba(232,178,76,0.15)]" fill="none" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <pattern id="goldDots" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse">
@@ -124,7 +124,7 @@ export const HeroSection: React.FC = () => {
           </div>
 
           {/* ========================================================
-              B. MIDDLE LAYER: Gold financial chart lines
+              LAYER 2: Gold financial market chart
              ======================================================== */}
           <div className="absolute inset-0 select-none pointer-events-none z-10 flex items-center justify-center">
             <svg viewBox="0 0 600 200" className="w-full h-auto opacity-35" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -163,13 +163,13 @@ export const HeroSection: React.FC = () => {
           </div>
 
           {/* ========================================================
-              C. MARKET DATA CARDS (Top center-left/right)
+              TOP MARKET CARDS (Top center of right section)
              ======================================================== */}
-          <div className="absolute top-[10px] left-[10px] flex flex-wrap gap-2.5 z-40 px-2 pointer-events-auto">
-            {/* Card 1: Gold */}
-            <div className="bg-[#0D0D0D]/90 border border-[#E8B24C]/30 px-3.5 py-2 rounded-[10px] flex items-center gap-2.5 shadow-md">
+          <div className="absolute top-[10px] left-1/2 -translate-x-1/2 flex flex-row gap-2.5 z-40 px-2 pointer-events-auto w-max">
+            {/* Card 1: Gold 24K */}
+            <div className="bg-[#0D0D0D]/95 border border-[#E8B24C]/30 px-3.5 py-2 rounded-[10px] flex items-center gap-2.5 shadow-md">
               <div className="flex flex-col text-left">
-                <span className="text-[8.5px] font-bold text-neutral-400 tracking-wider uppercase">GOLD 24K (10g)</span>
+                <span className="text-[8.5px] font-bold text-neutral-400 tracking-wider uppercase">GOLD 24K</span>
                 <span className="text-sm font-extrabold text-white tracking-wide font-display mt-0.5">₹72,540.00</span>
               </div>
               <span className="text-[9px] font-black text-green-400 bg-green-500/10 border border-green-500/20 px-1.5 py-0.5 rounded-md">
@@ -178,9 +178,9 @@ export const HeroSection: React.FC = () => {
             </div>
 
             {/* Card 2: Silver */}
-            <div className="bg-[#0D0D0D]/90 border border-[#E8B24C]/30 px-3.5 py-2 rounded-[10px] flex items-center gap-2.5 shadow-md">
+            <div className="bg-[#0D0D0D]/95 border border-[#E8B24C]/30 px-3.5 py-2 rounded-[10px] flex items-center gap-2.5 shadow-md">
               <div className="flex flex-col text-left">
-                <span className="text-[8.5px] font-bold text-neutral-400 tracking-wider uppercase">SILVER (1Kg)</span>
+                <span className="text-[8.5px] font-bold text-neutral-400 tracking-wider uppercase">SILVER</span>
                 <span className="text-sm font-extrabold text-white tracking-wide font-display mt-0.5">₹85,620.00</span>
               </div>
               <span className="text-[9px] font-black text-green-400 bg-green-500/10 border border-green-500/20 px-1.5 py-0.5 rounded-md">
@@ -189,7 +189,7 @@ export const HeroSection: React.FC = () => {
             </div>
 
             {/* Card 3: Live Updates */}
-            <div className="bg-[#0D0D0D]/90 border border-[#E8B24C]/30 px-3.5 py-2 rounded-[10px] flex items-center gap-2 shadow-md">
+            <div className="bg-[#0D0D0D]/95 border border-[#E8B24C]/30 px-3.5 py-2 rounded-[10px] flex items-center gap-2 shadow-md">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
@@ -201,16 +201,16 @@ export const HeroSection: React.FC = () => {
           </div>
 
           {/* ========================================================
-              D. FOREGROUND LAYER: Realistic 3D Bullion Bars
+              LAYER 3: Bullion Product Showcase (Gold/Silver Bars)
              ======================================================== */}
-          <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-auto transform -translate-x-[40px] md:-translate-x-[60px] translate-y-[30px] scale-[0.85] md:scale-95">
+          <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-auto transform -translate-x-[40px] md:-translate-x-[65px] translate-y-[40px] scale-[0.82] md:scale-[0.92]">
             <ThreeDBars />
           </div>
 
           {/* ========================================================
-              E. FRONT LAYER: Smartphone Mockup (on the far right)
+              LAYER 4: Smartphone Mockup (on the far right, height: 650px visually)
              ======================================================== */}
-          <div className="absolute right-[5px] md:right-[15px] bottom-[10px] md:bottom-[20px] z-30 pointer-events-auto scale-[0.8] md:scale-[0.88] lg:scale-[0.95] xl:scale-100 origin-bottom-right">
+          <div className="absolute right-[5px] md:right-[15px] bottom-[15px] md:bottom-[25px] z-30 pointer-events-auto scale-[0.8] md:scale-[1.0] lg:scale-[1.18] origin-bottom-right">
             <MobileMockup />
           </div>
 
