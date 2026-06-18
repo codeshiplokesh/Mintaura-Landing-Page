@@ -5,7 +5,12 @@ import goldBarsImg from '../assets/gold_bars_stack.png';
 
 export const CtaBanner: React.FC = () => {
   return (
-    <section className="relative w-full min-h-[160px] bg-gradient-to-r from-[#A86E1A] via-[#D7A04A] to-[#A86E1A] overflow-hidden rounded-none flex items-center justify-center py-6 md:py-8 lg:py-0 select-none">
+    <section 
+      className="relative w-full h-[78px] overflow-hidden rounded-none flex items-center justify-center select-none"
+      style={{ 
+        background: 'linear-gradient(to right, #A96E1E, #C58A36, #D49D4A, #C58A36, #A96E1E)' 
+      }}
+    >
       
       {/* Brushed Metal Texture Overlay */}
       <div 
@@ -15,55 +20,48 @@ export const CtaBanner: React.FC = () => {
         }}
       />
 
-      {/* Center Glow Effect */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.25)_0%,transparent_60%)] pointer-events-none z-0" />
-
       {/* Left Gold Bars Stack */}
-      <div className="absolute left-0 bottom-[-10px] md:bottom-[-20px] z-10 pointer-events-none select-none origin-bottom-left scale-[0.6] md:scale-[0.8] lg:scale-100">
+      <div className="absolute left-[-10px] top-[-15px] z-10 pointer-events-none select-none origin-top-left scale-[0.6] sm:scale-[0.8] md:scale-[0.9] lg:scale-100">
         <img 
           src={goldBarsImg} 
           alt="Gold bars stack left" 
-          className="h-[150px] w-auto object-contain filter drop-shadow-[0_8px_16px_rgba(0,0,0,0.4)]"
+          className="h-[120px] w-auto object-contain"
         />
       </div>
 
       {/* Right Gold Bars Stack (Mirrored) */}
-      <div className="absolute right-0 bottom-[-10px] md:bottom-[-20px] z-10 pointer-events-none select-none origin-bottom-right scale-[0.6] md:scale-[0.8] lg:scale-100">
+      <div className="absolute right-[-10px] top-[-15px] z-10 pointer-events-none select-none origin-top-right scale-[0.6] sm:scale-[0.8] md:scale-[0.9] lg:scale-100">
         <img 
           src={goldBarsImg} 
           alt="Gold bars stack right" 
-          className="h-[150px] w-auto object-contain scale-x-[-1] filter drop-shadow-[0_8px_16px_rgba(0,0,0,0.4)]"
+          className="h-[120px] w-auto object-contain scale-x-[-1]"
         />
       </div>
 
-      {/* Centered Content */}
-      <div className="relative z-20 flex flex-col items-center justify-center text-center px-4 md:px-16 lg:h-[160px] w-full max-w-[1320px] mx-auto gap-3.5">
+      {/* Absolute Centered Content */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col items-center justify-center w-full max-w-[600px] text-center px-4">
         
-        {/* Texts Wrapper */}
-        <div className="flex flex-col gap-1 items-center justify-center">
-          {/* Main Heading */}
-          <h2 className="text-white font-sans font-bold text-[24px] md:text-[32px] lg:text-[42px] leading-tight tracking-tight">
-            Ready to Grow Your Bullion Network?
-          </h2>
-          
-          {/* Subheading */}
-          <p className="text-white/90 font-sans font-normal text-xs md:text-sm lg:text-[16px] leading-relaxed max-w-[600px]">
-            Join dealers, refiners, and bullion professionals across India.
-          </p>
-        </div>
+        {/* Heading */}
+        <h2 className="text-white font-sans font-bold text-[18px] leading-none tracking-tight m-0 p-0">
+          Ready to Grow Your Bullion Network?
+        </h2>
+        
+        {/* Subtext */}
+        <p className="text-white/85 font-sans font-normal text-[10px] leading-none mt-[2px] mb-0 p-0">
+          Be early. Be connected. Be unstoppable.
+        </p>
 
         {/* CTA Button */}
         <motion.button
           whileHover={{ 
-            y: -2, 
-            backgroundColor: '#000000',
-            boxShadow: '0 0 20px rgba(246, 211, 123, 0.4)' 
+            y: -1, 
+            backgroundColor: '#000000'
           }}
-          transition={{ duration: 0.3, ease: 'easeInOut' }}
-          className="bg-[#111111] text-[#F6D37B] font-semibold text-[16px] w-[80%] md:w-[240px] h-[54px] rounded-[10px] flex items-center justify-center gap-2 cursor-pointer shadow-md"
+          transition={{ duration: 0.2, ease: 'easeInOut' }}
+          className="bg-[#111111] text-[#F2C15A] font-semibold text-[12px] w-[170px] h-[32px] rounded-[6px] flex items-center justify-center gap-1.5 shadow-[0_2px_8px_rgba(0,0,0,0.15)] hover:bg-[#000000] transition-all mt-[8px] cursor-pointer"
         >
           <span>Get Early Access Now</span>
-          <ArrowRight size={16} className="text-[#F6D37B]" strokeWidth={2.5} />
+          <ArrowRight size={12} className="text-[#F2C15A]" strokeWidth={2.5} />
         </motion.button>
 
       </div>
