@@ -223,9 +223,9 @@ export const HeroSection: React.FC = () => {
           </div>
 
           {/* ========================================================
-              LAYER 4: Smartphone Mockup (Offset to the far right)
+              LAYER 4: Smartphone Mockup (Aligned within the right edge)
              ======================================================== */}
-          <div className="absolute right-[-40px] lg:right-[-60px] bottom-[25px] z-30 pointer-events-auto scale-[0.7] md:scale-[0.85] lg:scale-[1.0] origin-bottom-right translate-x-[20px] select-none">
+          <div className="absolute right-[10px] md:right-[20px] lg:right-[30px] bottom-[25px] z-30 pointer-events-auto scale-[0.7] md:scale-[0.85] lg:scale-[1.0] origin-bottom-right select-none">
             <MobileMockup />
           </div>
 
