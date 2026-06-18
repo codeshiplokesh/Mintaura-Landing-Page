@@ -12,8 +12,8 @@ function App() {
       <EcosystemSection />
       <ParticipantsSection />
       <DealsSection />
-      <FaqSection />
       <LeadSection />
+      <FaqSection />
     </div>
   );
 }
