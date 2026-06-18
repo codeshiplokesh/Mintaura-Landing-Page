@@ -4,7 +4,7 @@ export const Logo: React.FC<{ className?: string }> = ({ className = '' }) => {
   return (
     <div className={`flex items-center gap-2.5 font-display select-none ${className}`}>
       {/* Icon: Three diagonal gold bars */}
-      <div className="relative w-8 h-8 flex items-center justify-center">
+      <div className="relative w-11 h-11 flex items-center justify-center">
         <svg
           viewBox="0 0 100 100"
           className="w-full h-full filter drop-shadow-[0_2px_8px_rgba(212,160,23,0.4)]"
@@ -60,7 +60,7 @@ export const Logo: React.FC<{ className?: string }> = ({ className = '' }) => {
       </div>
       
       {/* Brand Text */}
-      <span className="text-2xl font-bold tracking-tight text-white flex items-center">
+      <span className="text-3xl font-bold tracking-tight text-white flex items-center">
         mint<span className="text-gold-500">aura</span>
       </span>
     </div>

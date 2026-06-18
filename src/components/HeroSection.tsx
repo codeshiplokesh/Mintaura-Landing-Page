@@ -26,12 +26,12 @@ export const HeroSection: React.FC = () => {
       <div className="absolute bottom-[5%] right-[5%] w-[650px] h-[650px] bg-[radial-gradient(circle,rgba(200,146,43,0.08)_0%,rgba(0,0,0,0)_70%)] blur-[110px] pointer-events-none z-0" />
 
       {/* Header/Navbar */}
-      <header className="relative w-full px-6 md:px-10 lg:px-12 py-6 flex items-center justify-between z-50">
+      <header className="relative w-full px-6 md:px-12 lg:px-16 py-10 flex items-center justify-between z-50">
         <Logo />
         <motion.button
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="h-[48px] px-6 rounded-[10px] text-sm font-semibold text-[#111111] bg-gradient-to-r from-[#FFE082] via-[#E8B24C] to-[#C8922B] hover:from-[#FFF] hover:to-[#FFE082] transition-all cursor-pointer shadow-[0_4px_15px_rgba(232,178,76,0.25)]"
+          className="h-[54px] px-8 rounded-[12px] text-base font-semibold text-[#111111] bg-gradient-to-r from-[#FFE082] via-[#E8B24C] to-[#C8922B] hover:from-[#FFF] hover:to-[#FFE082] transition-all cursor-pointer shadow-[0_6px_18px_rgba(232,178,76,0.3)]"
         >
           Get Early Access
         </motion.button>
