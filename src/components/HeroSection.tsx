@@ -26,7 +26,7 @@ export const HeroSection: React.FC = () => {
       <div className="absolute bottom-[5%] right-[5%] w-[650px] h-[650px] bg-[radial-gradient(circle,rgba(200,146,43,0.08)_0%,rgba(0,0,0,0)_70%)] blur-[110px] pointer-events-none z-0" />
 
       {/* Header/Navbar */}
-      <header className="relative w-full px-6 md:px-12 lg:px-16 py-10 flex items-center justify-between z-50">
+      <header className="relative w-full px-4 md:px-8 lg:px-12 py-10 flex items-center justify-between z-50">
         <Logo />
         <motion.button
           whileHover={{ scale: 1.02 }}
@@ -38,7 +38,7 @@ export const HeroSection: React.FC = () => {
       </header>
 
       {/* Main Hero Content */}
-      <main className="relative flex-1 w-full max-w-[1480px] mx-auto px-6 md:px-16 lg:px-24 flex flex-col lg:flex-row items-center justify-between z-40 py-12 lg:py-16 h-full gap-12 lg:gap-16">
+      <main className="relative flex-1 w-full max-w-none px-4 md:px-8 lg:px-12 flex flex-col lg:flex-row items-center justify-between z-40 py-12 lg:py-16 h-full gap-12 lg:gap-16">
         
         {/* Left Side (42% on desktop) */}
         <div className="w-full lg:w-[42%] flex flex-col justify-center items-start text-left gap-7 lg:translate-y-[-10px]">
