@@ -26,7 +26,7 @@ export const HeroSection: React.FC = () => {
       <div className="absolute bottom-[5%] right-[5%] w-[650px] h-[650px] bg-[radial-gradient(circle,rgba(200,146,43,0.08)_0%,rgba(0,0,0,0)_70%)] blur-[110px] pointer-events-none z-0" />
 
       {/* Header/Navbar */}
-      <header className="relative w-full max-w-[1480px] mx-auto px-6 md:px-16 lg:px-24 py-8 flex items-center justify-between z-50">
+      <header className="relative w-full px-6 md:px-10 lg:px-12 py-6 flex items-center justify-between z-50">
         <Logo />
         <motion.button
           whileHover={{ scale: 1.02 }}
