@@ -2,6 +2,7 @@ import { HeroSection } from './components/HeroSection';
 import { EcosystemSection } from './components/EcosystemSection';
 import { ParticipantsSection } from './components/ParticipantsSection';
 import { DealsSection } from './components/DealsSection';
+import { FaqSection } from './components/FaqSection';
 import { LeadSection } from './components/LeadSection';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <EcosystemSection />
       <ParticipantsSection />
       <DealsSection />
+      <FaqSection />
       <LeadSection />
     </div>
   );
