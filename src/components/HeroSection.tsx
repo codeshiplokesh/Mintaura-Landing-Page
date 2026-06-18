@@ -6,34 +6,46 @@ import { ThreeDBars } from './ThreeDBars';
 import { MobileMockup } from './MobileMockup';
 
 export const HeroSection: React.FC = () => {
-  // SVG curves for the live trading chart animation
-  const chartPath1 = "M 0,160 Q 60,110 120,150 T 240,110 T 360,130 T 480,70 T 600,40";
-  const chartPath2 = "M 0,140 Q 60,170 120,110 T 240,150 T 360,90 T 480,120 T 600,50";
+  // SVG curves for the live trading chart animation - High peaks & valleys commodities chart
+  const chartPath1 = "M 0,165 Q 45,60 90,135 T 180,55 T 270,145 T 360,75 T 450,155 T 540,65 T 600,30";
+  const chartPath2 = "M 0,145 Q 45,160 90,95 T 180,135 T 270,65 T 360,115 T 450,85 T 540,115 T 600,45";
 
   return (
     <div className="relative w-full lg:h-[760px] bg-[#000000] overflow-hidden flex flex-col justify-between select-none">
       
+      {/* ========================================================
+          CINEMATIC VIGNETTE & GOLD GLOWS (Institutional Depth)
+         ======================================================== */}
+      {/* Atmospheric Vignette */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0)_55%,rgba(0,0,0,0.85)_100%)] pointer-events-none z-20" />
+      
+      {/* Top Left Gold Atmospheric Glow */}
+      <div className="absolute top-[-10%] left-[20%] w-[550px] h-[550px] bg-[radial-gradient(circle,rgba(232,178,76,0.12)_0%,rgba(0,0,0,0)_70%)] blur-[90px] pointer-events-none z-0" />
+      
+      {/* Bottom Right Gold Atmospheric Glow */}
+      <div className="absolute bottom-[5%] right-[5%] w-[650px] h-[650px] bg-[radial-gradient(circle,rgba(200,146,43,0.08)_0%,rgba(0,0,0,0)_70%)] blur-[110px] pointer-events-none z-0" />
+
       {/* Header/Navbar */}
-      <header className="relative w-full max-w-[1400px] mx-auto px-6 md:px-12 py-6 flex items-center justify-between z-50">
+      <header className="relative w-full max-w-[1400px] mx-auto px-6 md:px-12 py-8 flex items-center justify-between z-50">
         <Logo />
         <motion.button
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="h-[48px] px-6 rounded-[10px] text-sm font-semibold text-[#111111] bg-[#E8B24C] hover:bg-[#D7A04A] transition-colors cursor-pointer"
+          className="h-[48px] px-6 rounded-[10px] text-sm font-semibold text-[#111111] bg-gradient-to-r from-[#FFE082] via-[#E8B24C] to-[#C8922B] hover:from-[#FFF] hover:to-[#FFE082] transition-all cursor-pointer shadow-[0_4px_15px_rgba(232,178,76,0.25)]"
         >
           Get Early Access
         </motion.button>
       </header>
 
       {/* Main Hero Content */}
-      <main className="relative flex-1 w-full max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col lg:flex-row items-center justify-between z-40 pb-12 lg:pb-0 h-full gap-8">
+      <main className="relative flex-1 w-full max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col lg:flex-row items-center justify-between z-40 pb-16 lg:pb-0 h-full gap-10">
         
         {/* Left Side (42% on desktop) */}
-        <div className="w-full lg:w-[42%] flex flex-col justify-center items-start text-left gap-6 md:gap-7">
+        <div className="w-full lg:w-[42%] flex flex-col justify-center items-start text-left gap-7 lg:translate-y-[-10px]">
           
           {/* Top Gold Badge */}
-          <div className="inline-flex items-center gap-2 px-4 h-[40px] rounded-full bg-[rgba(232,178,76,0.12)] border border-[rgba(232,178,76,0.2)]">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#E8B24C] shrink-0" />
+          <div className="inline-flex items-center gap-2.5 px-4 h-[40px] rounded-full bg-[rgba(232,178,76,0.12)] border border-[rgba(232,178,76,0.25)] shadow-[0_2px_12px_rgba(232,178,76,0.05)]">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#E8B24C] shrink-0 shadow-[0_0_8px_#E8B24C]" />
             <span className="text-xs md:text-sm font-semibold text-[#E8B24C] font-sans tracking-wide">
               India's Premier Bullion Networking Platform
             </span>
@@ -42,7 +54,7 @@ export const HeroSection: React.FC = () => {
           {/* Large Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-[84px] font-extrabold text-white font-sans leading-[0.95] text-left tracking-tight m-0 max-w-[560px]">
             India’s Smart Network<br />
-            for <span className="text-[#E8B24C]">Gold & Silver</span><br />
+            for <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFE082] via-[#E8B24C] to-[#C8922B] drop-shadow-[0_2px_15px_rgba(232,178,76,0.15)]">Gold & Silver</span><br />
             Bullion Trading
           </h1>
 
@@ -55,18 +67,21 @@ export const HeroSection: React.FC = () => {
           <div className="flex flex-row gap-[20px] w-full justify-start items-center">
             {/* Button 1: Get Early Access Now */}
             <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="h-[58px] w-[220px] rounded-[10px] text-base font-semibold text-[#111111] bg-[#E8B24C] hover:bg-[#D7A04A] transition-colors cursor-pointer flex items-center justify-center"
+              whileHover={{ 
+                scale: 1.015,
+                boxShadow: '0 6px 25px rgba(232, 178, 76, 0.4)'
+              }}
+              whileTap={{ scale: 0.985 }}
+              className="h-[58px] w-[220px] rounded-[10px] text-base font-bold text-[#111111] bg-gradient-to-r from-[#FFE082] via-[#E8B24C] to-[#C8922B] hover:from-[#FFF] hover:to-[#FFE082] shadow-[0_4px_20px_rgba(232,178,76,0.3)] transition-all cursor-pointer flex items-center justify-center"
             >
               Get Early Access Now
             </motion.button>
 
             {/* Button 2: Book a Demo */}
             <motion.button
-              whileHover={{ scale: 1.02, backgroundColor: 'rgba(232,178,76,0.05)' }}
-              whileTap={{ scale: 0.98 }}
-              className="h-[58px] w-[190px] rounded-[10px] text-base font-semibold text-[#E8B24C] border border-[#E8B24C] bg-transparent transition-colors cursor-pointer flex items-center justify-center gap-2"
+              whileHover={{ scale: 1.015, backgroundColor: 'rgba(232,178,76,0.06)', borderColor: '#FFF' }}
+              whileTap={{ scale: 0.985 }}
+              className="h-[58px] w-[190px] rounded-[10px] text-base font-semibold text-[#E8B24C] border border-[#E8B24C]/60 bg-transparent transition-all cursor-pointer flex items-center justify-center gap-2"
             >
               Book a Demo
               <span className="text-[#E8B24C]">➔</span>
@@ -74,7 +89,7 @@ export const HeroSection: React.FC = () => {
           </div>
 
           {/* Feature Row */}
-          <div className="flex flex-wrap gap-x-6 gap-y-3 pt-6 border-t border-neutral-900 w-full mt-4">
+          <div className="flex flex-wrap gap-x-6 gap-y-3 pt-6 border-t border-neutral-900/80 w-full mt-6">
             {[
               { icon: ShieldCheck, text: 'Verified Network' },
               { icon: Lock, text: 'Secure & Confidential' },
@@ -96,13 +111,13 @@ export const HeroSection: React.FC = () => {
         <div className="w-full lg:w-[58%] relative h-[520px] lg:h-[640px] flex items-center justify-center mt-8 lg:mt-0">
           
           {/* ========================================================
-              LAYER 1 (BACKGROUND): Large dotted world map (20% Opacity)
+              LAYER 1 (BACKGROUND): Large Dotted World Map (35% Opacity)
              ======================================================== */}
-          <div className="absolute inset-0 opacity-20 select-none pointer-events-none flex items-center justify-center z-0">
-            <svg viewBox="0 0 1000 550" className="w-full h-auto filter drop-shadow-[0_0_15px_rgba(232,178,76,0.15)]" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div className="absolute inset-0 opacity-35 select-none pointer-events-none flex items-center justify-center z-0">
+            <svg viewBox="0 0 1000 550" className="w-full h-auto filter drop-shadow-[0_0_20px_rgba(232,178,76,0.22)]" fill="none" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <pattern id="goldDots" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse">
-                  <circle cx="3" cy="3" r="1.8" fill="#E8B24C" opacity="0.32" />
+                  <circle cx="3" cy="3" r="2.0" fill="#E8B24C" opacity="0.45" />
                 </pattern>
                 {/* Stylized outline of the continents */}
                 <clipPath id="worldClip">
@@ -118,19 +133,19 @@ export const HeroSection: React.FC = () => {
               </defs>
               <rect x="0" y="0" width="1000" height="550" fill="url(#goldDots)" clipPath="url(#worldClip)" />
               {/* Pulsing India location dot */}
-              <circle cx="650" cy="245" r="4" fill="#E8B24C" />
-              <circle cx="650" cy="245" r="12" fill="none" stroke="#E8B24C" strokeWidth="1" opacity="0.6" className="animate-ping" />
+              <circle cx="650" cy="245" r="4.5" fill="#E8B24C" />
+              <circle cx="650" cy="245" r="14" fill="none" stroke="#E8B24C" strokeWidth="1.5" opacity="0.75" className="animate-ping" />
             </svg>
           </div>
 
           {/* ========================================================
-              LAYER 2: Gold financial market chart
+              LAYER 2: Glowing trading graph (Live commodities chart)
              ======================================================== */}
           <div className="absolute inset-0 select-none pointer-events-none z-10 flex items-center justify-center">
-            <svg viewBox="0 0 600 200" className="w-full h-auto opacity-35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 600 200" className="w-full h-auto opacity-45" fill="none" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <linearGradient id="chartGlow" x1="0" y1="0" x2="0" y2="200" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stopColor="#E8B24C" stopOpacity="0.25" />
+                  <stop offset="0%" stopColor="#E8B24C" stopOpacity="0.35" />
                   <stop offset="100%" stopColor="#E8B24C" stopOpacity="0" />
                 </linearGradient>
               </defs>
@@ -155,44 +170,44 @@ export const HeroSection: React.FC = () => {
                   ease: "easeInOut"
                 }}
                 stroke="#E8B24C"
-                strokeWidth="2"
+                strokeWidth="3.2"
                 strokeLinecap="round"
-                filter="drop-shadow(0 0 6px rgba(232,178,76,0.8))"
+                filter="drop-shadow(0 0 10px rgba(232,178,76,0.95))"
               />
             </svg>
           </div>
 
           {/* ========================================================
-              TOP MARKET CARDS (Top center of right section)
+              TOP MARKET CARDS (Centered above map & bars)
              ======================================================== */}
-          <div className="absolute top-[10px] left-1/2 -translate-x-1/2 flex flex-row gap-2.5 z-40 px-2 pointer-events-auto w-max">
+          <div className="absolute top-[10px] left-1/2 -translate-x-1/2 flex flex-row gap-3 z-40 px-2 pointer-events-auto w-max">
             {/* Card 1: Gold 24K */}
-            <div className="bg-[#0D0D0D]/95 border border-[#E8B24C]/30 px-3.5 py-2 rounded-[10px] flex items-center gap-2.5 shadow-md">
+            <div className="bg-[#0D0D0D]/80 backdrop-blur-md border border-[#E8B24C]/45 px-4 py-2.5 rounded-[12px] flex items-center gap-3.5 shadow-[0_15px_30px_rgba(0,0,0,0.65)]">
               <div className="flex flex-col text-left">
                 <span className="text-[8.5px] font-bold text-neutral-400 tracking-wider uppercase">GOLD 24K</span>
                 <span className="text-sm font-extrabold text-white tracking-wide font-display mt-0.5">₹72,540.00</span>
               </div>
-              <span className="text-[9px] font-black text-green-400 bg-green-500/10 border border-green-500/20 px-1.5 py-0.5 rounded-md">
+              <span className="text-[9.5px] font-black text-green-400 bg-green-500/15 border border-green-500/30 px-1.5 py-0.5 rounded-md">
                 +1.45%
               </span>
             </div>
 
             {/* Card 2: Silver */}
-            <div className="bg-[#0D0D0D]/95 border border-[#E8B24C]/30 px-3.5 py-2 rounded-[10px] flex items-center gap-2.5 shadow-md">
+            <div className="bg-[#0D0D0D]/80 backdrop-blur-md border border-[#E8B24C]/45 px-4 py-2.5 rounded-[12px] flex items-center gap-3.5 shadow-[0_15px_30px_rgba(0,0,0,0.65)]">
               <div className="flex flex-col text-left">
                 <span className="text-[8.5px] font-bold text-neutral-400 tracking-wider uppercase">SILVER</span>
                 <span className="text-sm font-extrabold text-white tracking-wide font-display mt-0.5">₹85,620.00</span>
               </div>
-              <span className="text-[9px] font-black text-green-400 bg-green-500/10 border border-green-500/20 px-1.5 py-0.5 rounded-md">
+              <span className="text-[9.5px] font-black text-green-400 bg-green-500/15 border border-green-500/30 px-1.5 py-0.5 rounded-md">
                 +0.52%
               </span>
             </div>
 
             {/* Card 3: Live Updates */}
-            <div className="bg-[#0D0D0D]/95 border border-[#E8B24C]/30 px-3.5 py-2 rounded-[10px] flex items-center gap-2 shadow-md">
-              <span className="relative flex h-2 w-2">
+            <div className="bg-[#0D0D0D]/80 backdrop-blur-md border border-[#E8B24C]/45 px-4 py-2.5 rounded-[12px] flex items-center gap-2.5 shadow-[0_15px_30px_rgba(0,0,0,0.65)]">
+              <span className="relative flex h-2.5 w-2.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
               </span>
               <span className="text-[9.5px] font-extrabold text-neutral-300 tracking-wider uppercase font-sans">
                 Live Updates
@@ -203,14 +218,14 @@ export const HeroSection: React.FC = () => {
           {/* ========================================================
               LAYER 3: Bullion Product Showcase (Gold/Silver Bars)
              ======================================================== */}
-          <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-auto transform -translate-x-[40px] md:-translate-x-[65px] translate-y-[40px] scale-[0.82] md:scale-[0.92]">
+          <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-auto transform -translate-x-[50px] md:-translate-x-[75px] translate-y-[50px] scale-[0.88] md:scale-[0.98]">
             <ThreeDBars />
           </div>
 
           {/* ========================================================
-              LAYER 4: Smartphone Mockup (on the far right, height: 650px visually)
+              LAYER 4: Smartphone Mockup (Offset to the far right)
              ======================================================== */}
-          <div className="absolute right-[5px] md:right-[15px] bottom-[15px] md:bottom-[25px] z-30 pointer-events-auto scale-[0.8] md:scale-[1.0] lg:scale-[1.18] origin-bottom-right">
+          <div className="absolute right-[-40px] lg:right-[-60px] bottom-[25px] z-30 pointer-events-auto scale-[0.7] md:scale-[0.85] lg:scale-[1.0] origin-bottom-right translate-x-[20px] select-none">
             <MobileMockup />
           </div>
 
