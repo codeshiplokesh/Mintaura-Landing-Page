@@ -11,7 +11,7 @@ export const HeroSection: React.FC = () => {
   const chartPath2 = "M 0,145 Q 45,160 90,95 T 180,135 T 270,65 T 360,115 T 450,85 T 540,115 T 600,45";
 
   return (
-    <div className="relative w-full lg:h-[760px] bg-[#000000] overflow-hidden flex flex-col justify-between select-none">
+    <div className="relative w-full lg:min-h-[860px] bg-[#000000] overflow-hidden flex flex-col justify-between select-none pb-12 lg:pb-16">
       
       {/* ========================================================
           CINEMATIC VIGNETTE & GOLD GLOWS (Institutional Depth)
@@ -26,7 +26,7 @@ export const HeroSection: React.FC = () => {
       <div className="absolute bottom-[5%] right-[5%] w-[650px] h-[650px] bg-[radial-gradient(circle,rgba(200,146,43,0.08)_0%,rgba(0,0,0,0)_70%)] blur-[110px] pointer-events-none z-0" />
 
       {/* Header/Navbar */}
-      <header className="relative w-full max-w-[1400px] mx-auto px-6 md:px-12 py-8 flex items-center justify-between z-50">
+      <header className="relative w-full max-w-[1480px] mx-auto px-6 md:px-16 lg:px-24 py-8 flex items-center justify-between z-50">
         <Logo />
         <motion.button
           whileHover={{ scale: 1.02 }}
@@ -38,7 +38,7 @@ export const HeroSection: React.FC = () => {
       </header>
 
       {/* Main Hero Content */}
-      <main className="relative flex-1 w-full max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col lg:flex-row items-center justify-between z-40 pb-16 lg:pb-0 h-full gap-10">
+      <main className="relative flex-1 w-full max-w-[1480px] mx-auto px-6 md:px-16 lg:px-24 flex flex-col lg:flex-row items-center justify-between z-40 py-12 lg:py-16 h-full gap-12 lg:gap-16">
         
         {/* Left Side (42% on desktop) */}
         <div className="w-full lg:w-[42%] flex flex-col justify-center items-start text-left gap-7 lg:translate-y-[-10px]">
