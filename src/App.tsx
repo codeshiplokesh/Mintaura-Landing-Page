@@ -2,7 +2,9 @@ import { HeroSection } from './components/HeroSection';
 import { EcosystemSection } from './components/EcosystemSection';
 import { ParticipantsSection } from './components/ParticipantsSection';
 import { DealsSection } from './components/DealsSection';
+import { FaqSection } from './components/FaqSection';
 import { LeadSection } from './components/LeadSection';
+import { CtaBanner } from './components/CtaBanner';
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <ParticipantsSection />
       <DealsSection />
       <LeadSection />
+      <FaqSection />
+      <CtaBanner />
     </div>
   );
 }

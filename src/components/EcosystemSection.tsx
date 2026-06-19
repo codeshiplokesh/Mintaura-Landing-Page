@@ -53,18 +53,18 @@ export const EcosystemSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative w-full bg-[#FAFAFA] pt-28 md:pt-36 pb-20 px-6 md:px-10 select-none z-30">
+    <section className="relative w-full bg-[#FAFAFA] pt-24 lg:pt-32 pb-20 px-4 md:px-8 lg:px-12 select-none z-30 flex flex-col gap-16">
       
       {/* ========================================================
-          1. TOP FLOATING STATS BAR (Sits on section boundary)
+          1. TOP STATISTICS BAR (Positioned absolutely overlapping Hero & Ecosystem)
          ======================================================== */}
-      <div className="absolute top-0 left-1/2 -translate-y-1/2 -translate-x-1/2 w-[calc(100%-48px)] md:w-[calc(100%-120px)] max-w-7xl bg-white rounded-[28px] shadow-[0_20px_50px_rgba(0,0,0,0.05),0_0_1px_rgba(0,0,0,0.05)] border border-neutral-100/50 p-7 md:py-[35px] md:px-[45px] z-40">
+      <div className="absolute top-0 left-4 right-4 md:left-8 md:right-8 lg:left-12 lg:right-12 -translate-y-1/2 bg-white rounded-[24px] md:rounded-[28px] shadow-[0_20px_50px_rgba(0,0,0,0.06),0_0_1px_rgba(0,0,0,0.1)] border border-neutral-100/50 p-6 md:py-[32px] md:px-[40px] z-40">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-8 gap-x-6">
           {stats.map((stat, i) => (
             <div key={i} className="flex items-center gap-4">
               {/* Rounded square icon container */}
-              <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-neutral-50 border border-neutral-100 flex items-center justify-center shrink-0">
-                <stat.icon size={22} className="text-gold-500" strokeWidth={2} />
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-[#FAF0DD]/40 border border-[#F3DFB6]/50 flex items-center justify-center shrink-0">
+                <stat.icon size={22} className="text-[#C58A36]" strokeWidth={2} />
               </div>
               
               {/* Stat Details */}
@@ -82,9 +82,9 @@ export const EcosystemSection: React.FC = () => {
       </div>
 
       {/* ========================================================
-          2. MAIN CONTENT AREA (Two Columns Grid)
+          2. MAIN CONTENT AREA (Two Columns Grid - Full Width)
          ======================================================== */}
-      <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-[50px] lg:gap-[70px]">
+      <div className="w-full max-w-none flex flex-col lg:flex-row items-center justify-between gap-[50px] lg:gap-[70px]">
         
         {/* Left Side (48% width on large screens) */}
         <div className="w-full lg:w-[48%] flex flex-col items-start text-left gap-6">

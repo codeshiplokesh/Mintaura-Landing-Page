@@ -132,11 +132,11 @@ export const ParticipantsSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative w-full bg-[#FAFAFA] pt-20 pb-20 px-6 md:px-10 select-none z-20">
+    <section className="relative w-full bg-[#FAFAFA] pt-20 pb-20 px-4 md:px-8 lg:px-12 select-none z-20">
       
       {/* ========================================================
           1. HEADER SECTION
-         ======================================================== */}
+         ======================================================= */}
       <div className="text-center flex flex-col items-center gap-2.5 mb-[60px]">
         {/* Top gold tag */}
         <span className="text-[13px] md:text-sm font-extrabold text-gold-500 tracking-[0.2em] uppercase">
@@ -151,7 +151,7 @@ export const ParticipantsSection: React.FC = () => {
       {/* ========================================================
           2. FEATURE CARDS GRID (6 cards)
          ======================================================== */}
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6 w-full max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6 w-full max-w-none">
         {cards.map((card, i) => (
           <motion.div
             key={i}
@@ -197,7 +197,7 @@ export const ParticipantsSection: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="relative mt-[70px] w-full max-w-7xl mx-auto bg-[#050505] rounded-[24px] py-[40px] px-6 md:px-[50px] shadow-[0_20px_60px_rgba(0,0,0,0.25)] flex items-center justify-between overflow-hidden"
+        className="relative mt-[70px] w-full max-w-none bg-[#050505] rounded-[24px] py-[40px] px-6 md:px-[50px] shadow-[0_20px_60px_rgba(0,0,0,0.25)] flex items-center justify-between overflow-hidden"
       >
         {/* Subtle gold vector laurels on left and right borders */}
         <LaurelWreath />
