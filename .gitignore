@@ -31,3 +31,9 @@ dist-ssr/
 *.njsproj
 *.sln
 *.sw?
+<<<<<<< HEAD
+=======
+
+# Nested folder/duplicate repository
+Mintaura-Landing-Page/
+>>>>>>> 5ec73bb682da96268047364838d108c3b22e9863
