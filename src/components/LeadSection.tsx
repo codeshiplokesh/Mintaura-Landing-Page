@@ -76,12 +76,12 @@ export const LeadSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative w-full bg-[#FAFAFA] pt-20 pb-20 px-6 md:px-10 select-none z-10 overflow-hidden">
+    <section className="relative w-full bg-[#FAFAFA] pt-20 pb-20 px-4 md:px-8 lg:px-12 select-none z-10 overflow-hidden">
       
       {/* ========================================================
           1. TOP AREA: Testimonials
          ======================================================== */}
-      <div className="w-full max-w-7xl mx-auto flex flex-col items-center gap-[45px] mb-[75px]">
+      <div className="w-full max-w-none flex flex-col items-center gap-[45px] mb-[75px]">
         {/* Centered Heading */}
         <h2 className="text-3xl md:text-4xl lg:text-[44px] font-extrabold text-neutral-900 font-display text-center leading-tight tracking-tight">
           What Industry Professionals Say
@@ -133,7 +133,7 @@ export const LeadSection: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="w-full max-w-7xl mx-auto bg-[#050505] rounded-[24px] p-8 md:p-[50px] shadow-[0_20px_60px_rgba(0,0,0,0.25)] border border-neutral-800/40 relative overflow-hidden"
+        className="w-full max-w-none bg-[#050505] rounded-[24px] p-8 md:p-[50px] shadow-[0_20px_60px_rgba(0,0,0,0.25)] border border-neutral-800/40 relative overflow-hidden"
       >
         {/* Glow decoration */}
         <div className="absolute -left-16 -top-16 w-44 h-44 bg-gold-500/10 blur-[50px] rounded-full pointer-events-none" />

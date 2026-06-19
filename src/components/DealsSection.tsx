@@ -111,12 +111,12 @@ export const DealsSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative w-full bg-[#FAFAFA] pt-20 pb-20 px-6 md:px-10 select-none z-10 overflow-hidden">
+    <section className="relative w-full bg-[#FAFAFA] pt-20 pb-20 px-4 md:px-8 lg:px-12 select-none z-10 overflow-hidden">
       
       {/* ========================================================
           1. TOP ROW: Title, Benefits (68%) & Gold Piggy Bank (32%)
          ======================================================== */}
-      <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 items-start mb-[70px]">
+      <div className="w-full max-w-none flex flex-col lg:flex-row gap-8 items-start mb-[70px]">
         
         {/* Left Side (68% width on desktop) */}
         <div className="w-full lg:w-[68%] flex flex-col items-start text-left gap-4">
@@ -231,7 +231,7 @@ export const DealsSection: React.FC = () => {
       {/* ========================================================
           2. MIDDLE ROW: Process Flow Card (45%) & App/Categories (55%)
          ======================================================== */}
-      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-[30px] items-stretch">
+      <div className="w-full max-w-none grid grid-cols-1 lg:grid-cols-12 gap-[30px] items-stretch">
         
         {/* Left Column (45% width) - Dark Card with Horizontal Timeline */}
         <motion.div
@@ -384,7 +384,7 @@ export const DealsSection: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="w-full max-w-7xl mx-auto bg-[#050505] border border-neutral-900/60 rounded-[24px] py-8 px-6 md:px-12 mt-10 shadow-[0_15px_35px_rgba(0,0,0,0.3)]"
+        className="w-full max-w-none bg-[#050505] border border-neutral-900/60 rounded-[24px] py-8 px-6 md:px-12 mt-10 shadow-[0_15px_35px_rgba(0,0,0,0.3)]"
       >
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-8 gap-x-6 items-center">
           {statistics.map((stat, i) => (

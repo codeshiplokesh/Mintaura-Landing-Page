@@ -27,8 +27,8 @@ export const FaqSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative w-full bg-[#FFFFFF] pt-[50px] pb-[50px] px-6 md:px-10 z-10 overflow-hidden">
-      <div className="w-full max-w-[1320px] mx-auto flex flex-col">
+    <section className="relative w-full bg-[#FFFFFF] pt-[50px] pb-[50px] px-4 md:px-8 lg:px-12 z-10 overflow-hidden">
+      <div className="w-full max-w-none flex flex-col">
         
         {/* Heading */}
         <div className="text-center mb-[40px]">
