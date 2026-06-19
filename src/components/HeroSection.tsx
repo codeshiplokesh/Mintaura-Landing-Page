@@ -104,11 +104,11 @@ export const HeroSection: React.FC = () => {
         </div>
 
         {/* Right Side (58% on desktop) */}
-        <div className="w-full lg:w-[58%] relative h-[480px] sm:h-[580px] lg:h-[680px] flex items-center justify-center mt-8 lg:mt-0 z-30">
+        <div className="w-full lg:w-[58%] relative h-[500px] sm:h-[620px] lg:h-[720px] flex items-center justify-center mt-8 lg:mt-0 z-30">
           <img
             src={heroBannerImg}
             alt="Mintaura Bullion Trading Platform Mockup"
-            className="absolute lg:right-[-40px] xl:right-[-80px] top-1/2 -translate-y-1/2 w-full lg:w-[130%] max-w-[950px] h-auto object-contain select-none pointer-events-none"
+            className="absolute right-[-10px] md:right-[-20px] lg:right-[-40px] xl:right-[-60px] top-1/2 -translate-y-1/2 w-[105%] sm:w-[115%] lg:w-[145%] xl:w-[155%] max-w-[1180px] h-auto object-contain select-none pointer-events-none"
           />
         </div>
 
