@@ -111,7 +111,7 @@ export const DealsSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative w-full bg-[#FAFAFA] pt-20 pb-20 px-4 md:px-8 lg:px-12 select-none z-10 overflow-hidden">
+    <section id="deals" className="relative w-full bg-[#FAFAFA] pt-20 pb-20 px-4 md:px-8 lg:px-12 select-none z-10 overflow-hidden">
       
       {/* ========================================================
           1. TOP ROW: Title, Benefits (68%) & Gold Piggy Bank (32%)

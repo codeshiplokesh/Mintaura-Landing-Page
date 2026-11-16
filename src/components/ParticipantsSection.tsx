@@ -132,7 +132,7 @@ export const ParticipantsSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative w-full bg-[#FAFAFA] pt-20 pb-20 px-4 md:px-8 lg:px-12 select-none z-20">
+    <section id="participants" className="relative w-full bg-[#FAFAFA] pt-20 pb-20 px-4 md:px-8 lg:px-12 select-none z-20">
       
       {/* ========================================================
           1. HEADER SECTION

@@ -53,7 +53,7 @@ export const EcosystemSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative w-full bg-[#FAFAFA] pt-24 lg:pt-32 pb-20 px-4 md:px-8 lg:px-12 select-none z-30 flex flex-col gap-16">
+    <section id="ecosystem" className="relative w-full bg-[#FAFAFA] pt-24 lg:pt-32 pb-20 px-4 md:px-8 lg:px-12 select-none z-30 flex flex-col gap-16">
       
       {/* ========================================================
           1. TOP STATISTICS BAR (Positioned absolutely overlapping Hero & Ecosystem)
